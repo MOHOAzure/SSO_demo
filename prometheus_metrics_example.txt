@@ -1,0 +1,190 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 3600.0
+python_gc_objects_collected_total{generation="1"} 44.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 51.0
+python_gc_collections_total{generation="1"} 4.0
+python_gc_collections_total{generation="2"} 0.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="13",patchlevel="2",version="3.13.2"} 1.0
+# HELP idp_login_attempts_total Total number of login attempts
+# TYPE idp_login_attempts_total counter
+idp_login_attempts_total{status="success",username="bob"} 1.0
+idp_login_attempts_total{status="success",username="alice"} 8.0
+idp_login_attempts_total{status="failure",username="invalid_user"} 2.0
+idp_login_attempts_total{status="failure",username="invalid"} 1.0
+# HELP idp_login_attempts_created Total number of login attempts
+# TYPE idp_login_attempts_created gauge
+idp_login_attempts_created{status="success",username="bob"} 1.760870674963375e+09
+idp_login_attempts_created{status="success",username="alice"} 1.760870796347314e+09
+idp_login_attempts_created{status="failure",username="invalid_user"} 1.7608707969869819e+09
+idp_login_attempts_created{status="failure",username="invalid"} 1.760870799929464e+09
+# HELP idp_authorization_code_issued_total Total number of authorization codes issued
+# TYPE idp_authorization_code_issued_total counter
+idp_authorization_code_issued_total{client_id="client2"} 3.0
+# HELP idp_authorization_code_issued_created Total number of authorization codes issued
+# TYPE idp_authorization_code_issued_created gauge
+idp_authorization_code_issued_created{client_id="client2"} 1.760870663303945e+09
+# HELP idp_token_exchange_total Total number of token exchange attempts
+# TYPE idp_token_exchange_total counter
+idp_token_exchange_total{client_id="client2",error_type="none",status="success"} 3.0
+# HELP idp_token_exchange_created Total number of token exchange attempts
+# TYPE idp_token_exchange_created gauge
+idp_token_exchange_created{client_id="client2",error_type="none",status="success"} 1.760870663537317e+09
+# HELP idp_http_request_duration_seconds HTTP request duration in seconds
+# TYPE idp_http_request_duration_seconds histogram
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.001",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.005",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.01",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.025",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.05",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.1",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.25",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="0.5",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="1.0",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="2.5",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="5.0",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="10.0",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/jwks.json",le="+Inf",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_count{endpoint="/.well-known/jwks.json",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_sum{endpoint="/.well-known/jwks.json",method="GET",status_code="200"} 0.002405881881713867
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.001",method="GET",status_code="302"} 11.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.005",method="GET",status_code="302"} 12.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.01",method="GET",status_code="302"} 12.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.025",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.05",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.1",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.25",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="0.5",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="1.0",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="2.5",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="5.0",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="10.0",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_bucket{endpoint="/authorize",le="+Inf",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_count{endpoint="/authorize",method="GET",status_code="302"} 13.0
+idp_http_request_duration_seconds_sum{endpoint="/authorize",method="GET",status_code="302"} 0.018776655197143555
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.001",method="POST",status_code="200"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.005",method="POST",status_code="200"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.01",method="POST",status_code="200"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.025",method="POST",status_code="200"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.05",method="POST",status_code="200"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.1",method="POST",status_code="200"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.25",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="0.5",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="1.0",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="2.5",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="5.0",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="10.0",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/token",le="+Inf",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_count{endpoint="/token",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_sum{endpoint="/token",method="POST",status_code="200"} 0.6557197570800781
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.001",method="GET",status_code="302"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.005",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.01",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.025",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.05",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.1",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.25",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="0.5",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="1.0",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="2.5",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="5.0",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="10.0",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/logout",le="+Inf",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_count{endpoint="/logout",method="GET",status_code="302"} 2.0
+idp_http_request_duration_seconds_sum{endpoint="/logout",method="GET",status_code="302"} 0.0017199516296386719
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.001",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.005",method="GET",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.01",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.025",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.05",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.1",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.25",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.5",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="1.0",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="2.5",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="5.0",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="10.0",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="+Inf",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_count{endpoint="/login",method="GET",status_code="200"} 4.0
+idp_http_request_duration_seconds_sum{endpoint="/login",method="GET",status_code="200"} 0.007471799850463867
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.001",method="POST",status_code="302"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.005",method="POST",status_code="302"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.01",method="POST",status_code="302"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.025",method="POST",status_code="302"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.05",method="POST",status_code="302"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.1",method="POST",status_code="302"} 0.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.25",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.5",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="1.0",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="2.5",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="5.0",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="10.0",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="+Inf",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_count{endpoint="/login",method="POST",status_code="302"} 9.0
+idp_http_request_duration_seconds_sum{endpoint="/login",method="POST",status_code="302"} 0.9935073852539062
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.001",method="GET",status_code="200"} 14.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.005",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.01",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.025",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.05",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.1",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.25",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="0.5",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="1.0",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="2.5",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="5.0",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="10.0",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_bucket{endpoint="/",le="+Inf",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_count{endpoint="/",method="GET",status_code="200"} 15.0
+idp_http_request_duration_seconds_sum{endpoint="/",method="GET",status_code="200"} 0.010184049606323242
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.001",method="POST",status_code="200"} 2.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.005",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.01",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.025",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.05",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.1",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.25",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="0.5",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="1.0",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="2.5",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="5.0",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="10.0",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_bucket{endpoint="/login",le="+Inf",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_count{endpoint="/login",method="POST",status_code="200"} 3.0
+idp_http_request_duration_seconds_sum{endpoint="/login",method="POST",status_code="200"} 0.0024988651275634766
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.001",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.005",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.01",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.025",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.05",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.1",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.25",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="0.5",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="1.0",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="2.5",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="5.0",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="10.0",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_bucket{endpoint="/.well-known/openid_configuration",le="+Inf",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_count{endpoint="/.well-known/openid_configuration",method="GET",status_code="200"} 1.0
+idp_http_request_duration_seconds_sum{endpoint="/.well-known/openid_configuration",method="GET",status_code="200"} 0.00023293495178222656
+# HELP idp_http_request_duration_seconds_created HTTP request duration in seconds
+# TYPE idp_http_request_duration_seconds_created gauge
+idp_http_request_duration_seconds_created{endpoint="/.well-known/jwks.json",method="GET",status_code="200"} 1.7608706050535522e+09
+idp_http_request_duration_seconds_created{endpoint="/authorize",method="GET",status_code="302"} 1.760870663304225e+09
+idp_http_request_duration_seconds_created{endpoint="/token",method="POST",status_code="200"} 1.7608706635377421e+09
+idp_http_request_duration_seconds_created{endpoint="/logout",method="GET",status_code="302"} 1.760870669094153e+09
+idp_http_request_duration_seconds_created{endpoint="/login",method="GET",status_code="200"} 1.760870670335702e+09
+idp_http_request_duration_seconds_created{endpoint="/login",method="POST",status_code="302"} 1.760870675077711e+09
+idp_http_request_duration_seconds_created{endpoint="/",method="GET",status_code="200"} 1.760870795977512e+09
+idp_http_request_duration_seconds_created{endpoint="/login",method="POST",status_code="200"} 1.760870796987297e+09
+idp_http_request_duration_seconds_created{endpoint="/.well-known/openid_configuration",method="GET",status_code="200"} 1.760870799810784e+09
