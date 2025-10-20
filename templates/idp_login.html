@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdP Login - Authentication</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        .container { max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; color: #333; margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .btn { width: 100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        .btn:hover { background: #218838; }
+        .error { color: #dc3545; background: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; border-radius: 4px; margin-bottom: 20px; }
+        .demo-accounts { background: #e9ecef; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+        .demo-accounts h4 { margin-top: 0; color: #495057; }
+        .demo-accounts p { margin: 5px 0; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 IdP Login</h1>
+            <p>Please enter your credentials</p>
+        </div>
+
+        {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <div class="demo-accounts">
+            <h4>🧪 Demo Accounts</h4>
+            <p><strong>Username:</strong> alice | <strong>Password:</strong> password123</p>
+            <p><strong>Username:</strong> bob | <strong>Password:</strong> password456</p>
+        </div>
+
+        <form method="post" action="/login">
+            <input type="hidden" name="redirect_uri" value="{{ redirect_uri }}">
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="/" style="color: #007bff; text-decoration: none;">← Back to IdP Home</a>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center; color: #666; font-size: 0.9em;">
+            <p>🔒 <strong>Secure Login Process</strong></p>
+            <p>A secure signed session cookie will be created after successful login</p>
+        </div>
+    </div>
+</body>
+</html>
